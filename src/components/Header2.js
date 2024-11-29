@@ -2,9 +2,11 @@ import { useState } from "react";
 import { LOGO_URL } from "../utils/constants";
 import Login from "./Login";
 
-const Header = () => {
+const Header2 = () => {
+  const [btn, setBtn] = useState("Login");
+
   console.log("Header rendered");
-  console.log("-------");
+  console.log(`Button text = ${btn}`);
 
   return (
     <div className="header">
@@ -22,7 +24,12 @@ const Header = () => {
           <li>Contact us</li>
           <li>Cart</li>
           <li>
-            <Login />
+            <button
+              onClick={() => {
+                btn === "Login" ? setBtn("Logout") : setBtn("Login");
+              }}>
+              {btn}
+            </button>
           </li>
         </ul>
       </div>
@@ -30,4 +37,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Header2;
