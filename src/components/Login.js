@@ -2,8 +2,8 @@ import { useState } from "react";
 
 const Login = () => {
   const [btn, setBtn] = useState("Login");
-  console.log("Login rendered");
-  console.log(`Button text = ${btn}`);
+  //   console.log("Login rendered");
+  //   console.log(`Button text = ${btn}`);
 
   return (
     <button

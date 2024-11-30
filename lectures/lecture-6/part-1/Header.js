@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { LOGO_URL } from "../utils/constants";
-import Login from "./Login";
+import Login from "../Login";
 
 const Header = () => {
-  //   console.log("Header rendered");
-  //   console.log("-------");
+  console.log("Header rendered");
+  console.log("-------");
 
   return (
     <div className="header">
