@@ -28,7 +28,11 @@ const Body = () => {
           Search
         </button>
       </div>
-      <div></div>
+      <div>
+        {/* test2 = {test.test2.name} <br />
+        test3 = {test.test3.name} <br /> */}
+        {/* test 1 = {test.test1.name} - error here */}
+      </div>
       <div className="filter">
         <button
           className="filter-btn"
