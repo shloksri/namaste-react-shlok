@@ -1,10 +1,12 @@
 import { useState } from "react";
 import { LOGO_URL } from "../utils/constants";
-import Login from "./Login";
+import { Link } from "react-router-dom";
 
 const Header = () => {
-  //   console.log("Header rendered");
-  //   console.log("-------");
+  const [btn, setBtn] = useState("Login");
+
+  console.log("Header rendered");
+  console.log(`Button text = ${btn}`);
 
   return (
     <div className="header">
@@ -17,12 +19,23 @@ const Header = () => {
       </div>
       <div className="nav-items">
         <ul>
-          <li>Home</li>
-          <li>About us</li>
-          <li>Contact us</li>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/About">About us</Link>
+          </li>
+          <li>
+            <Link to="/contact">Contact us</Link>
+          </li>
           <li>Cart</li>
           <li>
-            <Login />
+            <button
+              onClick={() => {
+                btn === "Login" ? setBtn("Logout") : setBtn("Login");
+              }}>
+              {btn}
+            </button>
           </li>
         </ul>
       </div>
