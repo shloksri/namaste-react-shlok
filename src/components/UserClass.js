@@ -3,16 +3,23 @@ import React from "react";
 class UserClass extends React.Component {
   constructor(props) {
     super(props);
-    console.log(props);
+    // console.log(props);
     this.state = {
       count: 1,
       name: "Shlok",
     };
+    console.log("Child Constructor");
+  }
+
+  componentDidMount() {
+    console.log("Child Component Did Mount");
   }
 
   render() {
     const { name, location } = this.props;
     const { count } = this.state; //destructuring state variables
+    console.log("Child Render");
+
     return (
       <div className="user-card">
         <h1>Class based component</h1>
@@ -20,18 +27,12 @@ class UserClass extends React.Component {
 
         <button
           onClick={() => {
-            this.state.count = this.state.count + 1;
-          }}>
-          Count Increase
-        </button>
-        {/* <button
-          onClick={() => {
             this.setState({
               count: count + 1,
             });
           }}>
           Count Increase
-        </button> */}
+        </button>
         <h2>Name: {name}</h2>
         <h3>Location: {location}</h3>
         <h3>Contact: @shloksri</h3>
