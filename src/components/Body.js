@@ -1,4 +1,4 @@
-import RestaurantCard from "./RestaurantCard";
+import RestaurantCard, { withPromotedLabel } from "./RestaurantCard";
 import resList from "../utils/mockData.js";
 import * as test from "../utils/sample.js";
 import { useState, useEffect } from "react";
@@ -12,7 +12,7 @@ const Body = () => {
   const [listofRestaurants, setListofRestaurants] = useState([]);
   const [filteredRestaurants, setFilteredRestaurants] = useState([]);
   const [inputTxt, setInputTxt] = useState("");
-
+  const RestaurantCardPromoted = withPromotedLabel(RestaurantCard);
   const onlineStatus = useOnlineStatus();
 
   const fetchData = async () => {
@@ -83,7 +83,11 @@ const Body = () => {
               <Link
                 to={"/restaurants/" + res.info.id}
                 key={res.info.id}>
-                <RestaurantCard resObj={res} />
+                {res.info.veg ? (
+                  <RestaurantCardPromoted resObj={res} />
+                ) : (
+                  <RestaurantCard resObj={res} />
+                )}
               </Link>
             ))}
           </div>
