@@ -10,7 +10,7 @@ const Header = () => {
   // console.log(`Button text = ${btn}`);
 
   return (
-    <div className="flex bg-pink-100 justify-between shadow-lg my-2">
+    <div className="flex bg-pink-100 justify-between shadow-lg my-2 sm:bg-yellow-200">
       <div className="logo-container">
         <img
           className="w-32"
