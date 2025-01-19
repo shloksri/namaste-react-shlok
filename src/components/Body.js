@@ -75,11 +75,11 @@ const Body = () => {
       </div>
 
       <div>
-        {filteredRestaurants.length === 0 ? (
+        {listofRestaurants.length === 0 ? (
           <Shimmer />
         ) : (
           <div className="flex flex-wrap">
-            {filteredRestaurants.map((res) => (
+            {listofRestaurants.map((res) => (
               <Link
                 to={"/restaurants/" + res.info.id}
                 key={res.info.id}>
