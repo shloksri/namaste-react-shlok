@@ -9,6 +9,7 @@ const RestaurantMenu = () => {
   const { resId } = useParams();
   const resInfo = useRestaurantMenu(resId);
   // console.log("URL for Restaurant: ", RESTAURANT_URL + resId);
+  const [showIndex, setShowIndex] = useState(null);
 
   if (resInfo === null) return <Shimmer />;
 
@@ -43,10 +44,16 @@ const RestaurantMenu = () => {
       <p className="font-bold text-lg">
         Cuisines - {cuisines.join(", ")} - {costForTwoMessage}
       </p>
-      {categories.map((category) => (
+      {categories.map((category, index) => (
         <RestaurantCategory
           key={category.card.card.title}
           data={category?.card?.card}
+          showItems={index === showIndex ? true : false}
+          setShowIndex={
+            index === showIndex
+              ? () => setShowIndex(null)
+              : () => setShowIndex(index)
+          } //this code checks if the same Category is clicked or not.
         />
       ))}
     </div>

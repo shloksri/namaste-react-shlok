@@ -1,12 +1,13 @@
 import RestaurantCard, { withPromotedLabel } from "./RestaurantCard";
 import resList from "../utils/mockData.js";
 import * as test from "../utils/sample.js";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 
 import * as React from "react";
 import Shimmer from "./Shimmer.js";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus.js";
+import UserContext from "../utils/UserContext.js";
 
 const Body = () => {
   const [listofRestaurants, setListofRestaurants] = useState([]);
@@ -14,6 +15,7 @@ const Body = () => {
   const [inputTxt, setInputTxt] = useState("");
   const RestaurantCardPromoted = withPromotedLabel(RestaurantCard);
   const onlineStatus = useOnlineStatus();
+  const { loggedinUser, setUserName } = useContext(UserContext);
 
   const fetchData = async () => {
     const data = await fetch(
@@ -40,7 +42,7 @@ const Body = () => {
   if (onlineStatus === false) return <h1>Sorry, it seems you are offline</h1>;
   return (
     <div className="body">
-      <div className="filter flex">
+      <div className="flex">
         <div className="search m-4 p-4">
           <input
             type="text"
@@ -71,6 +73,15 @@ const Body = () => {
             }}>
             Top rated Restaurants
           </button>
+        </div>
+        <div className="flex items-center">
+          User Name:
+          <input
+            type="text"
+            className="border border-black p-2 m-2 items-center"
+            value={loggedinUser}
+            onChange={(e) => setUserName(e.target.value)}
+          />
         </div>
       </div>
 
