@@ -51,3 +51,17 @@ This is a learning repo for me. No copyright infringement intended.
   module.exports = {
   presets: [["@babel/preset-env", { targets: { node: "current" } }]],
   };
+
+- Configured Parcel config file .parcelrc to override babel config managed by Parcel.
+
+- Jest configuration
+  npx jest --init
+  it asked for questions an created this file - jest.config.js
+  ✔ Would you like to use Typescript for the configuration file? … no
+  ✔ Choose the test environment that will be used for testing › jsdom (browser-like)
+  ✔ Do you want Jest to add coverage reports? … yes
+  ✔ Which provider should be used to instrument code for coverage? › babel
+  ✔ Automatically clear mock calls, instances and results before every test? … yes
+
+- Install JSDOM library
+  npm install --save-dev jest-environment-jsdom
