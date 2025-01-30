@@ -65,3 +65,21 @@ This is a learning repo for me. No copyright infringement intended.
 
 - Install JSDOM library
   npm install --save-dev jest-environment-jsdom
+
+- Install @babel/preset-react - to make JSX work inside test files.
+
+  This is required when you are trying to render a JSX component in the test file.
+  Message in the console -->
+  3 |
+  4 | test("Should load contact us component", () => { > 5 | render(<Contact />);
+  | ^
+  6 | const heading = screen.getByRole("heading");
+  7 | expect(heading).toBeInTheDocument();
+  8 | });
+
+      Add @babel/preset-react (https://github.com/babel/babel/tree/main/packages/babel-preset-react) to the 'presets' section of your Babel config to enable transformation.
+      If you want to leave it as-is, add @babel/plugin-syntax-jsx (https://github.com/babel/babel/tree/main/packages/babel-plugin-syntax-jsx) to the 'plugins' section to enable parsing.
+
+- After the above step, need to include @babel/preset-react in my babel.config.js file.
+
+- Install @testing-library/jest-dom
