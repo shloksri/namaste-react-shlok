@@ -1,0 +1,90 @@
+{
+  "info": {
+    "id": "362217",
+    "name": "Natural Ice Cream",
+    "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2025/1/3/b1d5a83d-d734-4166-8462-0e619e988665_362217.JPG",
+    "locality": "Kondapur",
+    "areaName": "Shilpa Hills",
+    "costForTwo": "₹150 for two",
+    "cuisines": ["Ice Cream", "Desserts"],
+    "avgRating": 4.6,
+    "veg": true,
+    "parentId": "2093",
+    "avgRatingString": "4.6",
+    "totalRatingsString": "4.6K+",
+    "sla": {
+      "deliveryTime": 38,
+      "lastMileTravel": 5,
+      "serviceability": "SERVICEABLE",
+      "slaString": "35-40 mins",
+      "lastMileTravelString": "5.0 km",
+      "iconType": "ICON_TYPE_EMPTY"
+    },
+    "availability": {
+      "nextCloseTime": "2025-01-30 23:59:00",
+      "opened": true
+    },
+    "badges": {
+      "imageBadges": [
+        {
+          "imageId": "Rxawards/_CATEGORY-Ice-creams.png",
+          "description": "Delivery!"
+        }
+      ]
+    },
+    "isOpen": true,
+    "type": "F",
+    "badgesV2": {
+      "entityBadges": {
+        "imageBased": {
+          "badgeObject": [
+            {
+              "attributes": {
+                "description": "Delivery!",
+                "imageId": "Rxawards/_CATEGORY-Ice-creams.png"
+              }
+            }
+          ]
+        },
+        "textBased": {},
+        "textExtendedBadges": {}
+      }
+    },
+    "aggregatedDiscountInfoV3": {
+      "header": "30% OFF",
+      "subHeader": "UPTO ₹75"
+    },
+    "orderabilityCommunication": {
+      "title": {},
+      "subTitle": {},
+      "message": {},
+      "customIcon": {}
+    },
+    "differentiatedUi": {
+      "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+      "differentiatedUiMediaDetails": {
+        "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+        "lottie": {},
+        "video": {}
+      }
+    },
+    "reviewsSummary": {},
+    "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+    "restaurantOfferPresentationInfo": {},
+    "externalRatings": {
+      "aggregatedRating": {
+        "rating": "--"
+      }
+    },
+    "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+  },
+  "analytics": {
+    "context": "seo-data-d1631204-2251-44cc-936e-427d0b12003c"
+  },
+  "cta": {
+    "link": "https://www.swiggy.com/city/hyderabad/natural-ice-cream-kondapur-shilpa-hills-rest362217",
+    "text": "RESTAURANT_MENU",
+    "type": "WEBLINK"
+  },
+  "widgetId": "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo"
+}

@@ -8,6 +8,7 @@ import UserContext from "../utils/UserContext";
 
 const RestaurantCard = (props) => {
   const { resObj } = props;
+  // console.log(resObj);
 
   const { name, cuisines, avgRating, costForTwo, sla } = resObj?.info;
   const { loggedinUser } = useContext(UserContext);
